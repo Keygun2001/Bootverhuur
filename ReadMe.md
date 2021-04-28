@@ -5,5 +5,5 @@
     -Header
     -Footer
 # Keagan:
-    -Index
-    -Reserveren pagina + Functies
+    - Index
+    - Pagina voor het bestellen + functies 
