@@ -15,7 +15,18 @@
 </head>
 <body>
     <div id="container">
+        <h1>BootVerhuur</h1>
 
+        <h3>Maak hier een keus -----></h3>
+        <div class="plaatje1">
+        
+        </div>
+        <div class="plaatje2">
+        
+        </div>
+        <div class="plaatje3">
+        
+        </div>
     </div>
 </body>
 </html>
