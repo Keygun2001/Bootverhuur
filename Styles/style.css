@@ -28,3 +28,6 @@ footer .container .column li a{
     text-decoration: none;
     margin: 10px 0px;
 }
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Maril-570-polyester-sloep00034-1500x1000-maril-foto-kopie.jpg")
+      }
