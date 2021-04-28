@@ -1,0 +1,3 @@
+# Duncan:
+    - config
+    - databasefuncties
