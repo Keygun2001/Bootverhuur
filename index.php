@@ -17,7 +17,7 @@
     <div id="container">
         <h1>BootVerhuur</h1>
 
-        <h3>Maak hier een keus -----></h3>
+        <h3>Maak hier een keus -----> dikke jooppieeee</h3>
         <div class="plaatje1">
         
         </div>
