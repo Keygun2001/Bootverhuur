@@ -7,3 +7,4 @@
 # Keagan:
     -Index
     -Reserveren pagina + Functies
+    - keagen is cool
