@@ -1,5 +1,38 @@
-#container {
-    height:1000px;
-    width: 1780px;
-    background-color: green;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.boot>div {
+    margin: 10px 10px 10px 0;
+}
+
+.boot>div>img {
+    width: 300px;
+    height: 200px;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.w-full {
+    width: 98%;
+    height: 100px;
 }
