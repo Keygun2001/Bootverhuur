@@ -1,8 +1,8 @@
 <?php
 require_once('databaseFunctions.php');
 
-function registerUser($firstName,$lastName,$email,$password){
-    $result = db_insertData("INSERT INTO Verhuur(FirstName, LastName, PhoneNumber, Email)VALUES ('$firstName','$lastName','$phonenumber','$email')");
+function registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID){
+    $result = db_insertData("INSERT INTO Verhuur(FirstName, LastName, PhoneNumber, Email, Password, BootID) VALUES ('$firstName','$lastName','$phonenumber','$email','$password', $bootID)");
     return $result;
 }
 
