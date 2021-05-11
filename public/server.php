@@ -7,6 +7,8 @@
     $email="";
     $password="";
     $bootID = "";
+    $dagdeelID = "";
+    $id = 0;
 
     if(isset($_POST['saveorder'])){
         $firstName=$_POST['firstName'];
@@ -15,7 +17,8 @@
         $email=$_POST['email'];
         $password=$_POST['passWord'];
         $bootID = $_POST['bootSelect'];
-        registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID);
-        // header("Location:orders.php");
+        $dagdeelID = $_POST['dagdeelSelect'];
+        registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID, $dagdeelID);
+        header("Location:order.php");
     }
 ?>

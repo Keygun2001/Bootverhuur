@@ -15,10 +15,6 @@ a {
     font-size: 20px;
 }
 
-.flex {
-    display: flex;
-}
-
 .boot>div {
     margin: 10px 10px 10px 0;
 }
@@ -28,11 +24,7 @@ a {
     height: 200px;
 }
 
-.mt-8 {
-    margin-top: 2rem;
-}
-
-.w-full {
-    width: 98%;
-    height: 100px;
+select, input, button {
+    border: 1px solid #000;
+    border-radius: 3px;
 }

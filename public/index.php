@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Styles/style.css" />
-</head>
+<?php 
+    include('header.php');
+?>
 <body>
     <div class="container">
         <div>
@@ -75,11 +70,10 @@
         </div>
         <div class="w-full">
             <button class="w-full">
-                <a href="#">
+                <a href="order.php">
                     Bestel hier je boot
                 </a>
             </button>
         </div>
     </div>
 </body>
-</html>

@@ -1,5 +1,5 @@
 <?php
-require_once ('../config/database.php');
+require_once('../config/database.php');
 
 function db_connect(){
     $mysqli = new mysqli(db_host, db_user, db_password, db_name);
