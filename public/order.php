@@ -1,7 +1,12 @@
 <?php 
+    session_start();
     include('server.php');
     include('header.php');
-
+    include_once('../src/databaseFunctions.php');
+    
+    include_once('../src/userFunctions.php');
+   include('header.php');
+   
     $conn = db_connect();
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -29,13 +34,14 @@
             </div>
             <div class="w-2/12 mt-4 inputrow">
                 <p>Email</p>
-                <input type="text" name="email" value="<?php echo $email; ?>">
+                <input type="email" name="email" value="<?php echo $email; ?>">
             </div>
             <div class="w-2/12 mt-4 inputrow">
                 <p>Wachtwoord</p>
-                <input type="text" name="passWord" value="<?php echo $password; ?>">
+                <input type="password" name="passWord" value="<?php echo $password; ?>">
             </div>
-            <div class="flex mt-4">
+            <div class=" mt-4">
+            <p>Selecteer de boot die u wil huren:</p>
                 <select name="bootSelect">
                     <?php 
                         while($boten = $boot-> fetch_assoc()){
@@ -45,6 +51,9 @@
                         }
                     ?>
                 </select>
+                <p>Selecteer een datum:</p>
+                <input type="datetime-local" name="DatumSelect">
+                <p>Selecteer een dagdeel:</p>
                 <select name="dagdeelSelect">
                     <?php 
                         while($dagdelen = $dagdeel-> fetch_assoc()){
