@@ -1,9 +1,12 @@
 <?php 
+    session_start();
     include('server.php');
     include("../config/database.php");
     include('header.php');
     include_once('../src/databaseFunctions.php');
-
+    
+    include_once('../src/userFunctions.php');
+   
     $conn = db_connect();
 
     if ($conn->connect_error) {
@@ -11,7 +14,7 @@
       }
     //   echo "Connected successfully";
       $boot = db_getData('SELECT * FROM Boot');
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,12 +22,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/style.css" />
     <title>Document</title>
+   
 </head>
 <body>
+
 <form method="post" action="server.php">
                                 <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                <div class="w-2/12 inputrow">
+                                <div class="w-2/12  inputrow">
                                     <p>Voornaam</p>
                                     <input type="text" name="firstName" value="<?php echo $uid; ?>">
                                 </div>
@@ -69,5 +75,6 @@
                                 <?php endif ?>
                                 </div>
                             </form>
+                        
 </body>
 </html>

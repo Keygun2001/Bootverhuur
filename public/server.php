@@ -16,6 +16,7 @@
         $password=$_POST['passWord'];
         $bootID = $_POST['bootSelect'];
         registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID);
+        header('Location: orderConfirmation.php');
         // header("Location:orders.php");
     }
 ?>

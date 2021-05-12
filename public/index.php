@@ -74,11 +74,11 @@
             </div>
         </div>
         <div class="w-full">
-            <button class="w-full">
-                <a href="#">
-                    Bestel hier je boot
-                </a>
-            </button>
+           <a href="order.php">
+                <button class="w-full">
+                   <h2>Bestel hier je boot</h2>
+                </button>
+            </a>
         </div>
     </div>
 </body>
