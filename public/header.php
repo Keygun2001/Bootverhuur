@@ -10,3 +10,6 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo CSS_FOLDER ?>" />
 </head>
+<body>
+    
+</body>
