@@ -1,20 +1,15 @@
 <?php 
-    session_start();
     include('server.php');
     include('header.php');
     include_once('../src/databaseFunctions.php');
-    
     include_once('../src/userFunctions.php');
-   include('header.php');
    
     $conn = db_connect();
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     $boot = db_getData("SELECT * FROM Boot");
-    $dagdeel = db_getData("SELECT * FROM Dagdeel")
-    
-  
+    $dagdeel = db_getData("SELECT * FROM Dagdeel");
 ?>
 <body>
     <div class="container">

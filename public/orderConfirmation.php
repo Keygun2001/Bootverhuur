@@ -1,24 +1,22 @@
 <?php
-  include('server.php');
-  include("../config/database.php");
   include('header.php');
+  include('server.php');
   include_once('../src/databaseFunctions.php');
   include_once('../src/userFunctions.php');
   
-    $orderID = $_SESSION['tempOrderID'];
-    $order = db_getData("SELECT * FROM Verhuur WHERE id=$orderID");
-    $order = $order->fetch_array();
+  $orderID = $_SESSION['tempOrderID'];
+
+  $order = db_getData("SELECT * FROM verhuur WHERE id=$orderID");
+  $order = $order->fetch_array();
 
 
-    $bootID = $order['BootID'];
-    $boot = db_getData("SELECT * FROM Boot WHERE id=$bootID");
-    $boot = $boot->fetch_array();
+  $bootID = $order['BootID'];
+  $boot = db_getData("SELECT * FROM boot WHERE id=$bootID");
+  $boot = $boot->fetch_array();
 
-    $dagID = $order['DagID'];
-    $dagdeel = db_getData("SELECT * FROM Dagdeel WHERE id=$dagID");
-    $dagdeel = $dagdeel->fetch_array();
-    
-  //die(print_r($dagdeel));
+  $dagID = $order['DagID'];
+  $dagdeel = db_getData("SELECT * FROM dagdeel WHERE id=$dagID");
+  $dagdeel = $dagdeel->fetch_array();
 ?>
 <!DOCTYPE html>
 <html lang="en">
