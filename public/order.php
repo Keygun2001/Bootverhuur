@@ -1,14 +1,12 @@
 <?php 
     session_start();
     include('server.php');
-    include("../config/database.php");
     include('header.php');
     include_once('../src/databaseFunctions.php');
     
     include_once('../src/userFunctions.php');
    
     $conn = db_connect();
-
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
@@ -56,9 +54,18 @@
                     while($boten = $boot-> fetch_assoc()){
                         ?>
                         <option value = "<?php echo $boten['id'];?>"><?php echo $boten['BoatName'];?></option>
-                         <?php
-                     }
-                    ?>
+                        <?php
+                            }
+                        ?>
+                    </select>
+                    <select name="dagdeelSelect">
+                        <?php 
+                            while($dagdelen = $dagdeel-> fetch_assoc()){
+                        ?>
+                        <option value="<?php echo $dagdelen['id'];?>"><?php echo $dagdelen['DayPart'];?></option>
+                        <?php
+                            }
+                        ?>
                     </select>
                     <br>
                                 <div class="mt-4">

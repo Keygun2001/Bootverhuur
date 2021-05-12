@@ -16,10 +16,6 @@ a {
     font-size: 20px;
 }
 
-.flex {
-    display: flex;
-}
-
 .boot>div {
     margin: 10px 10px 10px 0;
 }

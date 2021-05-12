@@ -7,6 +7,8 @@
     $email="";
     $password="";
     $bootID = "";
+    $dagdeelID = "";
+    $id = 0;
 
     if(isset($_POST['saveorder'])){
         $firstName=$_POST['firstName'];
