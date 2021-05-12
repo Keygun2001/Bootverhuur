@@ -69,19 +69,11 @@
             </div>
         </div>
         <div class="w-full">
-<<<<<<< HEAD
-           <a href="order.php">
-                <button class="w-full">
-                   <h2>Bestel hier je boot</h2>
-                </button>
-            </a>
-=======
             <button class="w-full">
                 <a href="order.php">
                     Bestel hier je boot
                 </a>
             </button>
->>>>>>> 41b715c7616ff25ee03117506795e3bcd33d4732
         </div>
     </div>
 </body>
