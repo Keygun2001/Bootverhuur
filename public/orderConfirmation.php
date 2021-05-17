@@ -1,4 +1,5 @@
 <?php
+
   include('server.php');
   include("../config/database.php");
   include('header.php');
@@ -9,7 +10,6 @@
     $order = db_getData("SELECT * FROM Verhuur WHERE id=$orderID");
     $order = $order->fetch_array();
 
-
     $bootID = $order['BootID'];
     $boot = db_getData("SELECT * FROM Boot WHERE id=$bootID");
     $boot = $boot->fetch_array();
@@ -17,6 +17,10 @@
     $dagID = $order['DagID'];
     $dagdeel = db_getData("SELECT * FROM Dagdeel WHERE id=$dagID");
     $dagdeel = $dagdeel->fetch_array();
+    
+    $Luxe = $order['LuxeID'];
+    $optie = db_getData("SELECT * FROM Optie WHERE id=$Luxe");
+    $optie = $optie->fetch_array();
     
   //die(print_r($dagdeel));
 ?>
@@ -44,8 +48,16 @@
     else{
         echo 5 * $boot['Price'];
     }
-
 ?></p>
+<p>Prijs voor de optie <?php echo $optie['Luxe']?>:€ <?php if($optie['Luxe'] == "Kapitein")
+{
+  echo $optie['PriceL'];
+} 
+else{
+  echo $optie['PriceL'];
+}?>
+
+</p>
 
 <!-- <p>Wachtwoord </p> -->
 

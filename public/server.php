@@ -10,6 +10,7 @@ $password="";
 $bootID = "";
 $dagdeelID = "";
 $id = 0;
+$luxeID="";
 
 if(isset($_POST['saveorder'])){
     $firstName=$_POST['firstName'];
@@ -20,8 +21,9 @@ if(isset($_POST['saveorder'])){
     $bootID = $_POST['bootSelect'];
     $dagdeelID = $_POST['dagdeelSelect'];
     $date = $_POST['DatumSelect'];
+    $luxeID = $_POST['LuxeSelect'];
     
-    $newOrder = registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID, $dagdeelID,$date);
+    $newOrder = registerUser($firstName,$lastName,$phonenumber,$email,$password, $bootID, $dagdeelID,$date,$luxeID);
     //die($newOrder);
     $_SESSION['tempOrderID'] = $newOrder;
     header("Location:orderConfirmation.php");

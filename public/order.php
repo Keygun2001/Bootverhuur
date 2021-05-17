@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include('server.php');
-    include('header.php');
+    // include('header.php');
     include_once('../src/databaseFunctions.php');
     
     include_once('../src/userFunctions.php');
@@ -12,7 +12,8 @@
         die("Connection failed: " . $conn->connect_error);
     }
     $boot = db_getData("SELECT * FROM Boot");
-    $dagdeel = db_getData("SELECT * FROM Dagdeel")
+    $dagdeel = db_getData("SELECT * FROM Dagdeel");
+    $optie= db_getData("SELECT * FROM Optie");
     
   
 ?>
@@ -62,6 +63,18 @@
                     <?php
                         }
                     ?>
+                </select>
+                <p>Nog extra opties voor de boot:</p>
+                <select name="LuxeSelect">
+                        <?php 
+                            while($LuxeOptie = $optie-> fetch_assoc()){ ?> 
+                            
+                            <option value="<?php echo $LuxeOptie['id'];?>"><?php echo $LuxeOptie['Luxe']; ?></option>
+                            
+                            <?php } ?>
+                        
+                        
+                      
                 </select>
             </div>
             <div class="mt-4">
