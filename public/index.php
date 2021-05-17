@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mb-12">
+            <div class="flex justify-center">
                 <a class="link" href="order.php">
                     <button class="w-full knop">
                         Huur hier je boot
