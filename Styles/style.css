@@ -33,7 +33,7 @@ a {
     height: 200px;
 }
 
-select, input, button {
+select, input, button, textarea {
     border: 1px solid #000;
     border-radius: 3px;
 }
@@ -43,4 +43,8 @@ select, input, button {
     background-color: rgb(15, 228, 210);
     color: white;
     font-weight: 700;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 42adab8e2c25114b5abc61bea2c1167685fba88d
