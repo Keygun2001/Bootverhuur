@@ -44,3 +44,30 @@ select, input, button, textarea {
     color: white;
     font-weight: 700;
 }
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.redcard, .greycard {
+    padding: 10px;
+    -webkit-box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    border: solid 1px #000;
+}
+
+.redcard {
+    background-color: red;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #fff;
+}
+
+.greycard {
+    background-color: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #000;
+}
