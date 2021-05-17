@@ -1,9 +1,7 @@
 <?php
 
   include('server.php');
-  include("../config/database.php");
   include('header.php');
-  include('server.php');
   include_once('../src/databaseFunctions.php');
   include_once('../src/userFunctions.php');
   
@@ -29,35 +27,64 @@
   
 ?>
 <body>
-<h1>Bedankt voor het huren van <?php echo "Deze boot " .$boot['BoatName']; ?> </h1>
-<h2>Dagdeel: <?php echo $dagdeel['DayPart'] ?></h2>
-<h2>Datum: <?php echo $order['DateVerhuur']; ?></h2>
-<h1>Uw Gegevens</h1>
-<p>Voornaam:  <?php echo $order['FirstName']; ?></p>
-<p>Achternaam:  <?php echo $order['LastName']; ?></p>
-<p>Telefoon Nummer:  <?php echo $order['PhoneNumber']; ?></p>
-<p>Email: <?php echo $order['Email']; ?></p>
-<p>Prijs:€ <?php  if($dagdeel['DayPart'] == "Hele Dag") 
-    { 
-        echo  15* $boot['Price']; 
-    }
-    else{
-        echo 5 * $boot['Price'];
-    }
-?></p>
-<p>Prijs voor de optie <?php echo $optie['Luxe']?>:€ <?php if($optie['Luxe'] == "Kapitein")
-{
-  echo $optie['PriceL'];
-} 
-else{
-  echo $optie['PriceL'];
-}?>
+  <div class="container py-12">
+    <div class="flex justify-center items-center w-full">
+      <div class="flex w-8/12">
+        <div class="w-4/12 redcard">
+          <h2>
+            Bedankt voor het huren van <?php echo "de " .$boot['BoatName']; ?> 
+          </h2>
+          <div>
+            <p class="mt-4">
+              Dagdeel: <?php echo $dagdeel['DayPart'] ?>
+            </p>
+          </div>
+          <p class="mt-4">
+            Datum: <?php echo $order['DateVerhuur']; ?>
+          </p>
+        </div>
+        <div class="w-8/12 greycard">
+          <h2>
+            Uw gegevens
+          </h2>
+          <div class="mt-4">
+            <p>
+              Voornaam:  <?php echo $order['FirstName']; ?>
+            </p>
+            <p>
+              Achternaam:  <?php echo $order['LastName']; ?>
+            </p>
+            <p>
+              Telefoon Nummer:  <?php echo $order['PhoneNumber']; ?>
+            </p>
+            <p>
+              Email: <?php echo $order['Email']; ?>
+            </p>
+            <p>
+              Prijs:€ 
+              <?php  
+                if($dagdeel['DayPart'] == "Hele Dag") { 
+                    echo  15* $boot['Price']; 
+                }else{
+                    echo 5 * $boot['Price'];
+                }
+              ?>
+            </p>
+            <!-- <p>
+              Prijs voor de optie <?php echo $optie['Luxe']?>:€ <?php if($optie['Luxe'] == "Kapitein")
+              {
+                echo $optie['PriceL'];
+              } 
+              else{
+                echo $optie['PriceL'];
+              }?>
 
-</p>
-
-<!-- <p>Wachtwoord </p> -->
-
-    
+            </p> -->
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 <?php 
